@@ -36,6 +36,8 @@
     transform: rotate(360deg);
   }
 }
-
+p {
+  color: #61dafb;
+}
 
 
