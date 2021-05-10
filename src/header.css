@@ -1,6 +1,23 @@
-.header {
-    background-color: blue;
-    display: inline-flex;
+#header {
+    background-color: #F7F8F9;
+    display: inline;
     margin-top: 0;
     width: 100vw;
+    
+  }
+  #titleLogo {
+      margin-left: 5%;
+      justify-content: left;
+      display: inline;
+      font-size: 54px;
+      width: auto;
+      background-color: #F7F8F9;
+  }
+  .rightHeader {
+      display: inline-flex;
+      justify-content: right;
+      margin-right: 5%;
+      margin-left: 70%;
+      
+
   }
