@@ -3,7 +3,13 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
     // ...
-    return <h1>What to watch</h1>
+    return <div className="header">
+    <h3>What to watch</h3>
+    <input type='search' label="Search"></input>
+    <h3>What to watch</h3>
+    <h3>What to watch</h3>
+    <h3>What to watch</h3>
+    </div>
 
   }
 }
