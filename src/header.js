@@ -6,9 +6,17 @@ class Header extends Component {
     return <div className="header">
     <h3>What to watch</h3>
     <input type='search' label="Search"></input>
-    <h3>What to watch</h3>
-    <h3>What to watch</h3>
-    <h3>What to watch</h3>
+    <div className="dd-wrapper">
+  <div className="dd-header">
+    <div className="dd-header-title"></div>
+  </div>
+  <div className="dd-list">
+    <button className="dd-list-item"></button>
+    <button className="dd-list-item"></button>
+    <button className="dd-list-item"></button>
+  </div>
+</div>
+    <button>Search</button>
     </div>
 
   }
