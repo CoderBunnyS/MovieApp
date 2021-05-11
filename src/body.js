@@ -1,18 +1,8 @@
 import React, { Component } from 'react'
-//import Header from './header'
+import GETDATA from './header'
+
  
 
-function getData() {
-    fetch("http://www.omdbapi.com/?s=lost&type=movie&apikey=20fc5714")
-        .then(res => {
-            return res.json()
-        })
-        .then(data =>  console.log(data[0].search[0].title))
-        
-        //.then(data => mainContainer.innerText = data.activity)
-        .catch(error => console.log("error"))
-    }
-     
 
 
 
@@ -22,8 +12,8 @@ export default class body extends Component {
     render() {
         return (
             <div>
-            <h1 className = "divider">Current Movie</h1>
-            <button onClick={getData}>Click Me</button>  
+            <h1 className = "divider">Current Search</h1>
+            <button onClick={GETDATA}>Click Me</button>  
             <div class="currentMovie"><img src="" alt=""></img>
             
             <p>Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie</p>
