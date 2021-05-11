@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 
-let searchInput = ;
+//let searchInput = "";
 
  export function GETDATA(searchInput) {
-    fetch("http://www.omdbapi.com/?s=" + {searchInput} + "lost&type=movie&apikey=20fc5714")
+    fetch("http://www.omdbapi.com/?s=lost&type=movie&apikey=20fc5714")
         .then(res => {
             return res.json()
         })
         .then(data =>  console.log(data))
-        
-        //.then(data => mainContainer.innerText = data.activity)
         .catch(error => console.log("error"))
     }
      
