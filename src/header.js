@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-//let searchInput = " ";
+let searchInput = " ";
 
- export function GETDATA() {
-    fetch("http://www.omdbapi.com/?s=lost&type=movie&apikey=20fc5714")
+ export function GETDATA(searchInput) {
+    fetch("http://www.omdbapi.com/?s=" + {searchInput} + "lost&type=movie&apikey=20fc5714")
         .then(res => {
             return res.json()
         })
@@ -20,8 +20,13 @@ class Header extends Component {
     return <div id="header">
     <h1 id="titleLogo">What to watch</h1>
     <div className="rightHeader">
-    <input type='search' placeholder="Search" ></input>
-    
+    <input type='search' placeholder="Search"  ></input>
+    <select id="selection" name="selection" placeholder="Type">
+    <option value="" hidden="">Type</option>
+    <option value="movie">Movies</option>
+    <option value="series">Series</option>
+    <option value="episode">Episode</option>
+    </select>
     <button onClick={GETDATA()}>Search</button>
     
     </div>
