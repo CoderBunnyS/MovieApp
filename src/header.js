@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-let searchInput = " ";
+let searchInput = ;
 
  export function GETDATA(searchInput) {
     fetch("http://www.omdbapi.com/?s=" + {searchInput} + "lost&type=movie&apikey=20fc5714")
