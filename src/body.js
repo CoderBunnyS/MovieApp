@@ -22,7 +22,8 @@ export default class body extends Component {
     render() {
         return (
             <div>
-            <h1 className = "divider">Current Movie</h1> 
+            <h1 className = "divider">Current Movie</h1>
+            <button onClick={getData}>Click Me</button>  
             <div class="currentMovie"><img src="" alt=""></img>
             
             <p>Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie Current Movie</p>
