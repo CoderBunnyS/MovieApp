@@ -1,8 +1,8 @@
 import React from 'react';
-import Thumb from './Thumb';
-import '../Assets/MovieCard.css'
+import Ratings from './Ratings';
+import '../Assets/CurrentMovie.css'
 
-const MovieCard = ({ Poster, Title, Plot, Released, imdbRating }) => {
+const CurrentMovie = ({ Poster, Title, Plot, Released, imdbRating }) => {
     return (
         <div className="movie">
             <img src={Poster} alt={Title} />
@@ -13,10 +13,10 @@ const MovieCard = ({ Poster, Title, Plot, Released, imdbRating }) => {
                     <p>Released Date: {Released}</p>
                     <p>Rating: {imdbRating}/10</p>
                 </div>
-                <Thumb rating={imdbRating} />
+                <Ratings rating={imdbRating} />
             </div>
         </div>
     );
 };
 
-export default MovieCard;
+export default CurrentMovie;

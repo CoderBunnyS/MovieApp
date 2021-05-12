@@ -2,31 +2,34 @@ import React, { useState } from 'react'
 import '../Assets/Search.css'
 
 const SearchBar = ({ fetchCall }) => {
-    const [searchedValue, setSearchedValue] = useState('')
-    const [selectedTypeValue, setSelectedTypeValue] = useState('')
+    const [userSearch, setuserSearch] = useState('')
+    const [typeChoice, setTypeChoice] = useState('')
 
 
     const handleInput = (e) => {
         e.preventDefault()
-        setSearchedValue(e.target.value)
+        //console.log(e)
+        setuserSearch(e.target.value)
     }
 
     const handleClick = (e) => {
         e.preventDefault()
-        fetchCall(searchedValue, selectedTypeValue)
+        //console.log(e)
+        fetchCall(userSearch, typeChoice)
     }
 
-    const handleSelectChange = (e) => {
+    const handleTypeChoice = (e) => {
         e.preventDefault()
-        setSelectedTypeValue(e.target.value)
+        //console.log(e)
+        setTypeChoice(e.target.value)
     }
 
     return (
         <div className='container-header'>
-            <h1 className='what-title'>What to watch</h1>
+            <h1 className='headerText'>What to watch</h1>
             <div>
                 <input onChange={handleInput} type='text' placeholder='Title' />
-                <select id="selection" name="selection" placeholder='Type' onChange={handleSelectChange}>
+                <select id="selection" name="selection" placeholder='Type' onChange={handleTypeChoice}>
                     <option value="" hidden>Type</option>
                     <option value="movie">Movies</option>
                     <option value="series">Series</option>
