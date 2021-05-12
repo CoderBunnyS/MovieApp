@@ -1,41 +1,40 @@
 .ratings-container {
+  display: flex;
 
-    display: flex;
+  flex-wrap: wrap;
 
-    flex-wrap: wrap;
-
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .currentMovie {
-    width: 500px;
-    border: 5px solid #d3d3d3;
-    margin: 10px;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+  width: 500px;
+  border: 5px solid #d3d3d3;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 .movie {
-    width: 30%;
-    border: 5px solid #d3d3d3;
-    margin: 10px;
-    justify-content: center;
-    align-items: center;
+  width: 30%;
+  border: 5px solid #d3d3d3;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
 }
 .movie-gallery-container {
-    margin: 10px;
-    padding: 20px 0;
-    
-    display: flex;
+  margin: 10px;
+  padding: 20px 0;
 
-    flex-wrap: wrap;
+  display: flex;
 
-    align-items: center;
+  flex-wrap: wrap;
 
-    justify-content: center;
+  align-items: center;
+
+  justify-content: center;
 }
 .divider {
-    background-color: #0079F4;
-    color: white;
-    font-weight: 400;
-    text-align: center;
+  background-color: #0079f4;
+  color: white;
+  font-weight: 400;
+  text-align: center;
 }
