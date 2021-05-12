@@ -4,7 +4,7 @@ import SearchBar from './Components/SearchBar'
 
 
 function App() {
-  const [pullData, setpullData] = useState([])
+  const [pullData, setPullData] = useState([])
   //get info from API
   //update url with user choices
   const fetchCall = async (searchParam, typeSelection = 'null') => {
@@ -12,7 +12,7 @@ function App() {
     const res = await fetch(url)
     const resJson = await res.json()
  
-    if (resJson) setpullData(resJson)
+    if (resJson) setPullData(resJson)
     console.log(resJson)
   }
 
