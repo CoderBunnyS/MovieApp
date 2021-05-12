@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Search from "./search"
 
 //let searchInput = "";
 
@@ -15,6 +16,7 @@ class Header extends Component {
   render() {
     return (
       <div id="header">
+      <Search />
         <h1 id="titleLogo">What to watch</h1>
         <div className="rightHeader">
           <input type="search" placeholder="Search"></input>
