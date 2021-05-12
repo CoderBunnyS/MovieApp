@@ -1,0 +1,12 @@
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    align-items: center;
+    background-color: #f7f8f9;
+  }
+  
+  .what-title{
+    font-weight: 600;
+    font-size: medium;
+  }

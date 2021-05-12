@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+}
+
+.movie-gallery-container{
+    margin: 10px;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    background: #0071fa;
+    color: white;
+    text-align: center;
+    font-weight: 300;
+}

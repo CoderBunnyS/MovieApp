@@ -1,9 +1,9 @@
 import React from 'react'
-//import '../styles/Thumb.css'
-import ThumbsUp from './Images/ThumbsDown.png'
-import ThumbsDown from './Images/ThumbsUp.png'
+import '../Assets/Thumb.css'
+import ThumbsUp from '../Images/ThumbsUp.png'
+import ThumbsDown from '../Images/ThumbsDown.png'
 
-const Rating = ({ rating }) => {
+const Thumb = ({ rating }) => {
     const thumbsUpIcon = <img className='thumb-icon' src={ThumbsUp} alt='thumbs up icon' />
 
     const thumbsDownIcon = <img className='thumb-icon' src={ThumbsDown} alt='thumbs down icon' />
@@ -16,4 +16,4 @@ const Rating = ({ rating }) => {
     );
 };
 
-export default Rating;
+export default Thumb;
