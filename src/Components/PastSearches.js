@@ -9,6 +9,7 @@ const PastSearches = ({ movieData, title, recentGallery }) => {
     useEffect(() => {
         setCurrentMovie(movieData)
         setSearchHistory(searchedMovies.concat(movieData))
+        
         //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [movieData]);
 

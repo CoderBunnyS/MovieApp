@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import '../Assets/Search.css'
 
+//create search bar & drop down menu
+//create click function
+
+
 const SearchBar = ({ fetchCall }) => {
     const [userSearch, setuserSearch] = useState('')
     const [typeChoice, setTypeChoice] = useState('')
