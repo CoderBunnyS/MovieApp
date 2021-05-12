@@ -10,8 +10,9 @@ function App() {
     let url = `https://www.omdbapi.com/?apikey=47fad17f&t=${searchParam}&type=${typeSelection}`
     const res = await fetch(url)
     const resJson = await res.json()
-
+ 
     if (resJson) setMovieData(resJson)
+    console.log(resJson)
   }
 
   return (
