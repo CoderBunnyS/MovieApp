@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react';
 import CurrentMovie from './CurrentMovie'
 import '../Assets/pastSearches.css'
 
-const PastSearches = ({ movieData, title, recentGallery }) => {
+const PastSearches = ({ pullData, title, recentGallery }) => {
     const [searchedMovies, setSearchHistory] = useState([])
     const [currentMovie, setCurrentMovie] = useState([])
 
     useEffect(() => {
-        setCurrentMovie(movieData)
-        setSearchHistory(searchedMovies.concat(movieData))
+        setCurrentMovie(pullData)
+        setSearchHistory(searchedMovies.concat(pullData))
         
         //eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [movieData]);
+    }, [pullData]);
 
     const historyGallery = searchedMovies.map((movie, i) => {
         return <CurrentMovie {...movie} key={i} />

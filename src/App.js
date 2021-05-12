@@ -4,7 +4,7 @@ import SearchBar from './Components/SearchBar'
 
 
 function App() {
-  const [movieData, setMovieData] = useState([])
+  const [pullData, setpullData] = useState([])
   //get info from API
   //update url with user choices
   const fetchCall = async (searchParam, typeSelection = 'null') => {
@@ -12,7 +12,7 @@ function App() {
     const res = await fetch(url)
     const resJson = await res.json()
  
-    if (resJson) setMovieData(resJson)
+    if (resJson) setpullData(resJson)
     console.log(resJson)
   }
 
@@ -20,8 +20,8 @@ function App() {
     <div className="App">
       
         <SearchBar fetchCall={fetchCall} />
-        <PastSearches title={'Current Search'} movieData={movieData} recentGallery={false} />
-        <PastSearches title={'Previous 3 Searches'} movieData={movieData} recentGallery={true} />
+        <PastSearches title={'Current Search'} pullData={pullData} recentGallery={false} />
+        <PastSearches title={'Previous 3 Searches'} pullData={pullData} recentGallery={true} />
       
     </div>
   );
