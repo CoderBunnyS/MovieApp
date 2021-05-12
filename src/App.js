@@ -6,8 +6,9 @@ function App() {
   const [pullData, setPullData] = useState([]);
   //get info from API
   //update url with user choices
-  const fetchCall = async (searchParam, typeSelection = "null") => {
+  const fetchCall = async (searchParam, typeSelection = null) => {
     let url = `https://www.omdbapi.com/?apikey=20fc5714&t=${searchParam}&type=${typeSelection}`;
+    console.log(typeSelection)
     const res = await fetch(url);
     const resJson = await res.json();
 
