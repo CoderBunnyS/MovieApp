@@ -18,14 +18,14 @@
   justify-content: center;
   align-items: center;
 }
-/* .movie-gallery-container {
+.movie-gallery-container {
   margin: 10px;
   padding: 20px 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-} */
+}
 .divider {
   background-color: #0079f4;
   color: white;
