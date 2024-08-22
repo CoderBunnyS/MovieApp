@@ -1,3 +1,10 @@
-.thumb-icons{
+.thumb-icons {
     height: 50px;
-}
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .thumb-icons:hover {
+    transform: scale(1.1);
+  }
+  

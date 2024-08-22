@@ -3,21 +3,29 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .currentMovie {
-  width: 500px;
+  max-width: 500px;
   border: 5px solid #d3d3d3;
-  margin: 10px;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+  margin: 10px auto;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
+
 .movie {
   width: 30%;
   border: 5px solid #d3d3d3;
   margin: 10px;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
+
 .movie-gallery-container {
   margin: 10px;
   padding: 20px 0;
@@ -25,10 +33,15 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  background-color: #f7f8f9;
 }
+
 .divider {
   background-color: #0079f4;
   color: white;
   font-weight: 400;
   text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
 }

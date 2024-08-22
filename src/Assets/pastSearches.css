@@ -1,19 +1,24 @@
 .container {
     width: 100%;
-}
-
-.movie-gallery-container{
+  }
+  
+  .movie-gallery-container {
     margin: 10px;
     padding: 20px 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-}
-
-.title{
-    background: #0071fa;
+    background-color: #f7f8f9;
+  }
+  
+  .title {
+    background-color: #0071fa;
     color: white;
     text-align: center;
     font-weight: 300;
-}
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  

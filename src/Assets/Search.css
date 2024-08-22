@@ -1,12 +1,46 @@
 .container-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px;
-    align-items: center;
-    background-color: #f7f8f9;
-  }
-  
-  .headerText{
-    font-weight: 600;
-    font-size: medium;
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  align-items: center;
+  background-color: #f7f8f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.headerText {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.container-header input,
+.container-header select,
+.container-header button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
+.container-header button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container-header button:hover {
+  background-color: #0056b3;
+}
+
+.container-header input {
+  width: 200px;
+}
+
+.container-header select {
+  width: 150px;
+}
