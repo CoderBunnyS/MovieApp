@@ -3,28 +3,31 @@ import CurrentMovie from './CurrentMovie'
 import '../Assets/pastSearches.css'
 
 const PastSearches = ({ pullData, title, recentGallery }) => {
-    const [searchedMovies, setSearchHistory] = useState([])
-    const [currentMovie, setCurrentMovie] = useState([])
+    const [searchedMovies, setSearchHistory] = useState([]);
+    const [currentMovie, setCurrentMovie] = useState(null);
 
     useEffect(() => {
-        setCurrentMovie(pullData)
-        setSearchHistory(searchedMovies.concat(pullData))
-        
-        //eslint-disable-next-line react-hooks/exhaustive-deps
+        setCurrentMovie(pullData);
+        setSearchHistory(searchedMovies.concat(pullData));
     }, [pullData]);
 
-    const historyGallery = searchedMovies.map((movie, i) => {
-        return <CurrentMovie {...movie} key={i} />
-    })
-
-    const singleMovies = <CurrentMovie {...currentMovie} />
-
-
-    let renderMovie = () => (recentGallery === true) ? historyGallery : singleMovies
+    const renderMovie = () => {
+        if (recentGallery === true) {
+            return searchedMovies.map((movie, i) => (
+                <CurrentMovie {...movie} key={i} />
+            ));
+        } else {
+            return currentMovie ? (
+                <CurrentMovie {...currentMovie} />
+            ) : (
+                <p>No results found. Please try a different search.</p>
+            );
+        }
+    };
 
     if (searchedMovies.length > 3) {
-        searchedMovies.splice(0, 1)
-        setSearchHistory(searchedMovies)
+        searchedMovies.splice(0, 1);
+        setSearchHistory(searchedMovies);
     }
 
     return (

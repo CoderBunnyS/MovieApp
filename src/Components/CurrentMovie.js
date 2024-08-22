@@ -1,6 +1,6 @@
 import React from 'react';
 import Ratings from './Ratings';
-import '../Assets/CurrentMovie.css'
+import '../Assets/CurrentMovie.css';
 
 const CurrentMovie = ({ Poster, Title, Plot, Released, imdbRating }) => {
     return (

@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import '../Assets/Search.css';
 
 const SearchBar = ({ fetchCall }) => {
-  const [userSearch, setUserSearch] = useState('');
+  const [userSearch, setuserSearch] = useState('');
   const [typeChoice, setTypeChoice] = useState('');
 
   const handleInput = (e) => {
     e.preventDefault();
-    setUserSearch(e.target.value);
+    setuserSearch(e.target.value);
   };
 
   const handleClick = (e) => {
@@ -32,20 +32,20 @@ const SearchBar = ({ fetchCall }) => {
       <div>
         <input
           onChange={handleInput}
-          onKeyPress={handleKeyPress}
+          onKeyDown={handleKeyPress}  // Trigger search on Enter key press
           type='text'
           placeholder='Title'
         />
+        <label htmlFor="selection">Choose type:</label>
         <select
           id="selection"
           name="selection"
           placeholder='Type'
           onChange={handleTypeChoice}
         >
-          <option value="" hidden>Type</option>
-          <option value="movie">Movies</option>
-          <option value="series">Series</option>
-          <option value="episode">Episode</option>
+          <option value="" hidden>🎬 Movie</option>
+          <option value="movie">🎬 Movie</option>
+          <option value="series">📺 TV Series</option>
         </select>
         <button onClick={handleClick}>Search</button>
       </div>

@@ -4,6 +4,7 @@ import SearchBar from "./Components/SearchBar";
 
 function App() {
   const [pullData, setPullData] = useState([]);
+
   //get info from API
   //update url with user choices
   const fetchCall = async (searchParam, typeSelection = null) => {
@@ -11,11 +12,15 @@ function App() {
     console.log(typeSelection);
     const res = await fetch(url);
     const resJson = await res.json();
-  
-    if (resJson) setPullData(resJson);
-    console.log(resJson);
+
+    if (resJson && resJson.Response === "True") {
+      setPullData(resJson);
+      console.log(resJson);
+    } else {
+      alert("Sorry, we couldn't find anything matching your search. Please try again with more specific information.");
+      setPullData([]); // Clear the current data
+    }
   };
-  
 
   return (
     <div className="App">
