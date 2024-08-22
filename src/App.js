@@ -7,14 +7,15 @@ function App() {
   //get info from API
   //update url with user choices
   const fetchCall = async (searchParam, typeSelection = null) => {
-    let url = `https://www.omdbapi.com/?apikey=20fc5714&t=${searchParam}&type=${typeSelection}`;
-    console.log(typeSelection)
+    let url = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}&t=${searchParam}&type=${typeSelection}`;
+    console.log(typeSelection);
     const res = await fetch(url);
     const resJson = await res.json();
-
+  
     if (resJson) setPullData(resJson);
     console.log(resJson);
   };
+  
 
   return (
     <div className="App">
